@@ -1,0 +1,20 @@
+/* ---------- Color Variables ---------- */
+:root {
+    --primary-color: #AB9566;
+    --secondary-color: #403D38;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --text-color: #8B9696;
+    --bg-color: #F8F8F8;
+    --i-color: #8E7754;
+    --bg-first-color:#353330;
+    --bg-second-color: #403D38;
+    --paragraph-color:#686868;
+    --second-text-color: #96938D;
+    --border-color: #76726961;
+    --facebook-color: #3B5998;
+    --google-color: #DD4B39;
+    --linkedin-color: #007BB5;
+    --twitter-color: #007BB5;
+    --settings-color: #218FE6;
+}

@@ -1,0 +1,637 @@
+/* ---------- Import Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Alegreya+Sans+SC&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ---------- Import Colors ---------- */
+@import url(colors.css);
+
+/* ---------- Fonts Classes ---------- */
+.primary-font {
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.secondary-font {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ---------- General Styles ---------- */
+* {
+    font-family: "Alegreya", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: .2s linear;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+
+p {
+    text-transform: none;
+}
+
+/* ---------- Clear Float Section ---------- */
+.clearfix {
+    clear: both;
+}
+
+/* ---------- Settings Section ---------- */
+.settings {
+    width: 40px;
+    height: 80px;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    font-size: 20px;
+    padding: 0 0 0 10px;
+    border-radius: 5px 0 0 5px;
+    background-color: var(--light-color);
+    box-shadow:  2px 1px 4px var(--dark-color);
+    z-index: 99999;
+}
+
+.settings i {
+    color: var(--paragraph-color);
+    margin: 8px 0;
+}
+
+.settings i:hover {
+    color: var(--settings-color);
+}
+
+/* ---------- Home ---------- */
+#home {
+    position: relative;
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 110vh;
+    width: 100%;
+}
+
+#home::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#home > * {
+    z-index: 10;
+    position: relative;
+}
+
+/* ---------- Container Section ---------- */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* ---------- Navigation Bar Section ---------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.navbar::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.navbar > * {
+    z-index: 10;
+    position: relative;
+}
+
+.navbar .logo-image {
+    width: 180px;
+    margin-left: 10px;
+}
+
+.navbar ul.menu {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+}
+
+.navbar ul.menu li {
+    display: inline-block;
+    padding: 36px 0px;
+}
+
+.navbar ul.menu li a {
+    color: var(--light-color);
+    font-size: 18px;
+    padding: 36px 12px;
+    text-transform: capitalize;
+}
+
+.navbar ul.menu li a.active {
+    position: relative;
+    font-size: 17px;
+}
+
+.navbar ul.menu li a.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.navbar ul.menu li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul.menu li a.active:hover {
+    color: var(--light-color);
+}
+
+/* ---------- Drop Down Menu ---------- */
+.navbar .dropdown-menu {
+    display: none;
+    padding: 8px 0 8px 0;
+}
+
+.navbar .dropdown-item:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 90px;
+    width: 200px;
+    background-color: var(--bg-second-color);
+}
+
+.navbar .dropdown-menu ul li {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    background-color: var(--bg-second-color);
+}
+
+.navbar .dropdown-menu ul li a {
+    display: block;
+    color: var(--text-color);
+    font-size: 14px;
+    padding: 10px 0 10px 15px;
+}
+
+.navbar .dropdown-menu ul li a:hover {
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    font-size: 15px;
+}
+
+/* ---------- Home Section ---------- */
+.homeSection {
+    position: relative;
+    margin: 20% auto;
+    width: 700px;
+    height: 340px;
+    padding: 20px 0;
+}
+
+.homeSection p {
+    color: var(--light-color);
+    font-size: 22px;
+    text-align: center;
+}
+
+.homeSection h1 {
+    margin: 15px 0;
+    text-align: center;
+    color: var(--light-color);
+    font-size: 76px;
+}
+
+.homeSection .heading-paragraph {
+    line-height: 2;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* ---------- Home Buttons ---------- */
+.hero-buttons {
+    width: 100%;
+    display: inline-block;
+    margin: 50px auto;
+    padding: 18px 0px 18px 30%;
+}
+
+.hero-buttons a {
+    color: var(--light-color);
+    padding: 15px 25px;
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-buttons .button-hero1 {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+
+}
+
+.hero-buttons .button-hero2 {
+    border: 2px solid var(--light-color);
+    border-radius: 5px;
+}
+
+.hero-buttons .button-hero1:hover {
+    background-color: var(--light-color);
+    border: 2px solid var(--light-color);
+    color: var(--dark-color);
+}
+
+.hero-buttons .button-hero2:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* ---------- Description Section ---------- */
+#description {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    margin: auto;
+}
+
+#description .container div {
+    display: inline-block;
+    width: 48%;
+}
+
+.description-image {
+    height: 550px;
+}
+
+.description-image img{
+    width: 100%;
+}
+
+.description-text {
+    float: right;
+    height: 550px;
+    padding: 60px 0 20px 30px;
+}
+
+.description-text h2 {
+    font-size: 32px;
+}
+
+.description-text p {
+    margin: 20px 0;
+    font-size: 17px;
+    color: var(--paragraph-color);
+}
+
+.description-text ul li {
+    list-style-type: none;
+    line-height: 4;
+}
+
+.description-text ul li i {
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px 10px 0 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--i-color);
+}
+
+.description-text ul li span {
+    color: var(--paragraph-color);
+}
+
+/* ---------- Location Section ---------- */
+#location {
+    width: 100%;
+    height: 90vh;
+    padding: 100px 0;
+    margin: auto;
+    background-color: var(--bg-color);
+}
+
+#location .container div {
+    display: inline-block;
+    width: 48%;
+}
+
+.location-text {
+    float: left;
+    height: 550px;
+    padding: 80px 0 30px 0px;
+    margin-right: 40px;
+}
+
+.location-text h2 {
+    font-size: 32px;
+}
+
+.location-text p {
+    margin: 40px 0;
+    font-size: 17px;
+    color: var(--paragraph-color);
+}
+
+.location-image {
+    height: 550px;
+}
+
+.location-image img{
+    width: 100%;
+}
+
+/* ---------- Baking Section ---------- */
+#baking {
+    width: 100%;
+    height: 120vh;
+    padding: 70px 0;
+}
+
+#baking .container h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#baking .container p {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--paragraph-color);
+}
+
+#baking .container .our-baking {
+    width: 100%;
+    margin: 80px auto;
+}
+
+#baking .container .our-baking div {
+    display: inline-block;
+    width: 31%;
+    text-align: center;
+}
+
+#baking .container .our-baking div:nth-child(2) {
+    margin: 0 2rem;
+}
+
+#baking .container .our-baking div img {
+    width: 100%;
+}
+
+/* ---------- Contact Information Section ---------- */
+#contact {
+    width: 100%;
+    height: 90vh;
+    padding: 10px 0;
+    margin: auto;
+    background-color: var(--bg-color);
+}
+
+
+#contact .container div {
+    display: inline-block;
+    width: 48%;
+    margin: 60px 0;
+}
+
+.contact-text {
+    float: left;
+    height: 550px;
+    padding: 20px 0 30px 0px;
+    margin-right: 40px;
+}
+
+.contact-text h2 {
+    font-size: 32px;
+}
+
+.contact-text p {
+    margin: 20px 0;
+    font-size: 17px;
+    color: var(--paragraph-color);
+}
+
+
+.contact-text ul li {
+    list-style-type: none;
+    line-height: 3;
+}
+
+.contact-text ul li i {
+    padding: 8px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 10px 0 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--light-color);
+    background-color: var(--i-color);
+}
+
+.contact-text ul li span {
+    color: var(--paragraph-color);
+}
+
+.contact-iframe {
+    width: 50%;
+    margin: 20px 0;
+    float: right;
+    position: relative;
+}
+
+.contact-iframe::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--dark-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;  /*This attribute tells the browser to ignore all mouse events and send them to the layers below.*/ /*Very Important*/
+}
+
+.contact-iframe img {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}
+
+/* ---------- About Us Section ---------- */
+#about-us {
+    width: 100%;
+    height: 70vh;
+    padding: 60px 0;
+    margin: auto;
+    background-color: var(--bg-second-color);
+}
+
+#about-us .container div {
+    float: left;
+    margin: 10px 0px 0 0;
+    width: 25%;
+}
+
+#about-us .container h4 {
+    color: var(--light-color);
+    text-transform: none;
+    padding: 0 5px;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#about-us .container .first-text {
+    width: 23%;
+    margin-right: 5px;
+}
+
+#about-us .container .second-text {
+    width: fit-content;
+}
+
+#about-us .container p {
+    width: 100%;
+    font-size: 16px;
+    text-transform: none;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 25px 0;
+}
+
+#about-us .container ul li {
+    color: var(--text-color);
+    line-height: 1.75;
+    margin: 0 10px;
+    padding: 10px 20px 0 0;
+    list-style-type: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#about-us .container ul li:last-child {
+    border-bottom: none;
+}
+
+#about-us .container ul li i {
+    display: inline-block;
+    position: absolute;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#about-us .container ul li span {
+    width: 80%;
+    position: relative;
+    left: 30px;
+    display: inline-block;
+}
+
+/* ---------- Footer Section ---------- */
+#footer {
+    width: 100%;
+    height: 40vh;
+    padding: 10px 0;
+    margin: auto;
+    background-color: var(--bg-first-color);
+}
+
+#footer .container {
+    text-align: center;
+}
+
+#footer .container img {
+    margin: 20px 0;
+}
+
+#footer .container p {
+    color: var(--text-color);
+    margin: 10px;
+    font-size: 15px;
+}
+
+#footer .container ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 20px 2px;
+    background-color: var(--bg-second-color);
+    color: var(--text-color);
+    border: 1px solid var(--bg-second-color);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+#footer .container ul li a {
+    color: var(--text-color);
+}
+
+#footer .container ul li a i {
+    padding: 10px 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#footer .container ul li a.facebook:hover i{
+    background-color: var(--facebook-color);
+    color: var(--light-color);
+}
+
+#footer .container ul li a.google:hover i{
+    background-color: var(--google-color);
+    color: var(--light-color);
+}
+
+#footer .container ul li a.linkedin:hover i{
+    background-color: var(--linkedin-color);
+    color: var(--light-color);
+}
+
+#footer .container ul li a.twitter:hover i{
+    background-color: var(--twitter-color);
+    color: var(--light-color);
+}
+
+#footer .container ul li i {
+    font-family: 20px;
+}
