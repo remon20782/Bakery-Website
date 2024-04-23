@@ -75,7 +75,7 @@ p {
 /* ---------- Home ---------- */
 #home {
     position: relative;
-    background-image: url("./images/home.jpg");
+    background-image: url("./Images/home.jpg");
     background-size: cover;
     background-position: center center;
     height: 110vh;
